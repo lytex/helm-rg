@@ -1,4 +1,4 @@
-;;; helm-rg.el --- a helm interface to ripgrep -*- lexical-binding: t -*-
+#|  |#;;; helm-rg.el --- a helm interface to ripgrep -*- lexical-binding: t -*-
 
 ;; Author: Danny McClanahan
 ;; Version: 0.1
@@ -850,6 +850,7 @@ case-sensitivity.")
           (helm-rg--alist-get-exhaustive helm-rg--case-sensitivity))
      :face helm-rg-active-arg-face)
     ("--color=ansi" :face helm-rg-inactive-arg-face)
+    ("--hyperlink-format none" :face helm-rg-inactive-arg-face)
     ((helm-rg--construct-match-color-format-arguments)
      :face helm-rg-inactive-arg-face)
     ((unless (helm-rg--empty-glob-p helm-rg--glob-string)
